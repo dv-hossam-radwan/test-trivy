@@ -35,8 +35,8 @@ jobs:
           exit-code: '1'
           ignore-unfixed: true
           vuln-type: 'os,library'
-          severity: 'MEDIUM'
-        continue-on-error: true             # allow the build to fail, similar to "allow_failure: true" in GitLab
+          severity: 'MEDIUM,HIGH,CRITICAL'
+        continue-on-error: false             # allow the build to fail, similar to "allow_failure: true" in GitLab
   prod:
     runs-on: ubuntu-latest
     needs: container_scanning
