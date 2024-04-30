@@ -33,7 +33,7 @@ jobs:
           image-ref: 'test-trivy${{ github.sha }}'
           format: 'table'
           exit-code: '1'
-          ignore-unfixed: true
+          ignore-unfixed: false
           vuln-type: 'os,library'
           severity: 'MEDIUM,HIGH,CRITICAL'
         continue-on-error: false             
